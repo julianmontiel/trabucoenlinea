@@ -6,9 +6,11 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<head>
-    <ui:insert name="head"></ui:insert>
-</head>
+<h:head>
+    <title><ui:insert name="head"></ui:insert></title>
+    <h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+    <ui:insert name="css"/>
+</h:head>
 
 <body>
     <h:form>
