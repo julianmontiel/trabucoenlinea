@@ -16,26 +16,28 @@
 
 <h:body>
 <h:form>
-    <div id="top">
-        <ui:insert name="top">
-            <h:commandLink  value="Inicio" action="#{myTemplateController.index()}"></h:commandLink> |
-            <h:commandLink  value="Cárdenas" action="#{myTemplateController.aboutus()}"></h:commandLink> |
-            <h:commandLink  value="Región" action="#{myTemplateController.news()}"></h:commandLink> |
-            <h:commandLink  value="Nacional" action="#{myTemplateController.news()}"></h:commandLink> |
-            <h:commandLink  value="Internacional" action="#{myTemplateController.news()}"></h:commandLink> |
-            <h:commandLink  value="Cultura" action="#{myTemplateController.news()}"></h:commandLink> |
-            <h:commandLink  value="Roja" action="#{myTemplateController.news()}"></h:commandLink> |
-            <h:commandLink  value="Elecciones" action="#{myTemplateController.news()}"></h:commandLink> |
-            <h:commandLink  value="Contactos" action="#{myTemplateController.news()}"></h:commandLink>
-        </ui:insert>
-    </div>
+    <div id="contenedor">
+        <div id="top">
+            <ui:insert name="top">
+                <h:commandLink  value="#{myTemplateController.CAT_INICIO}" action="#{myTemplateController.index()}"></h:commandLink> |
+                <h:commandLink  value="#{myTemplateController.CAT_CARDENAS}" action="#{myTemplateController.cardenas()}"></h:commandLink> |
+                <h:commandLink  value="#{myTemplateController.CAT_REGION}" action="#{myTemplateController.news()}"></h:commandLink> |
+                <h:commandLink  value="#{myTemplateController.CAT_NACIONAL}" action="#{myTemplateController.news()}"></h:commandLink> |
+                <h:commandLink  value="#{myTemplateController.CAT_INTERNACIONAL}" action="#{myTemplateController.news()}"></h:commandLink> |
+                <h:commandLink  value="#{myTemplateController.CAT_CULTURA}" action="#{myTemplateController.news()}"></h:commandLink> |
+                <h:commandLink  value="#{myTemplateController.CAT_ROJA}" action="#{myTemplateController.news()}"></h:commandLink> |
+                <h:commandLink  value="#{myTemplateController.CAT_ELECCIONES}" action="#{myTemplateController.news()}"></h:commandLink> |
+                <h:commandLink  value="#{myTemplateController.CAT_CONTACTOS}" action="#{myTemplateController.contactos()}"></h:commandLink>
+            </ui:insert>
+        </div>
 
-    <div id="content" class="center_content">
-        <ui:insert name="content">Content</ui:insert>
-    </div>
+        <div id="content" class="center_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
 
-    <div id="bottom">
-        <ui:insert name="bottom">Copyright 2016</ui:insert>
+        <div id="bottom">
+            <ui:insert name="bottom">Copyright 2016</ui:insert>
+        </div>
     </div>
 </h:form>
 </h:body>
