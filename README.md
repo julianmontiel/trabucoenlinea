@@ -1,0 +1,3 @@
+# trabucoenlinea
+prototipe
+AQUI PONDREMOS TODA LA CONFIGURACION DEL PROYECTO
