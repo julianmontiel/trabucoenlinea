@@ -7,20 +7,30 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
-    <title><ui:insert name="head"></ui:insert></title>
-    <h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
-    <ui:insert name="css"/>
+    <h:outputStylesheet library="css" name="default.css"/>
+    <h:outputStylesheet library="css" name="cssLayout.css"/>
+    <title>
+        <ui:insert name="head"></ui:insert>
+    </title>
 </h:head>
 
-<body>
-    <h:form>
-        <h:commandLink value="Home" action="#{myTemplateController.index()}"></h:commandLink> |
-        <h:commandLink value="About Us" action="#{myTemplateController.aboutus()}"></h:commandLink> |
-        <h:commandLink value="News" action="#{myTemplateController.news()}"></h:commandLink>
-        <br></br>
-        <ui:insert name="content"></ui:insert>
-        <br></br>
-        Copyright 2016
-    </h:form>
-</body>
+<h:body>
+<h:form>
+    <div id="top">
+        <ui:insert name="top">
+            <h:commandLink styleClass="categories" value="Home" action="#{myTemplateController.index()}"></h:commandLink> |
+            <h:commandLink styleClass="categories" value="About Us" action="#{myTemplateController.aboutus()}"></h:commandLink> |
+            <h:commandLink styleClass="categories" value="News" action="#{myTemplateController.news()}"></h:commandLink>
+        </ui:insert>
+    </div>
+
+    <div id="content" class="center_content">
+        <ui:insert name="content">Content</ui:insert>
+    </div>
+
+    <div id="bottom">
+        <ui:insert name="bottom">Copyright 2016</ui:insert>
+    </div>
+</h:form>
+</h:body>
 </html>

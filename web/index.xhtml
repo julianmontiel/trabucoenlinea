@@ -8,13 +8,12 @@
 
 
    <head>
-      <title>${title}</title>
+      <title>${myTemplateController.getTitle()}</title>
    </head>
    <body>
       <ui:composition template="/templates/mytemplate.xhtml">
          <ui:define name="head"></ui:define>
          <ui:define name="content">
-
             Home Page
          </ui:define>
       </ui:composition>
