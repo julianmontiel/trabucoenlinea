@@ -21,7 +21,7 @@ public class MyTemplateController {
     }
 
     public String index(){
-        this.title = "Home";
+        this.title = "Inicio";
         return "index";
     }
 
