@@ -1,14 +1,14 @@
 #top {
-    position: relative;
+    /*position: relative;
     background-color: #036fab;
     color: white;
     padding: 5px;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;*/
 }
 
 #bottom {
     position: relative;
-    background-color: #c2dfef;
+    /*background-color: #c2dfef;*/
     padding: 5px;
     margin: 10px 0px 0px 0px;
 }
@@ -29,7 +29,7 @@
 
 .center_content {
     position: relative;
-    background-color: #dddddd;
+    /*background-color: #dddddd;*/
     padding: 5px;
 }
 
@@ -62,4 +62,22 @@
     margin: 0 auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+div.logo:before {
+    width:100px; /*width of your image*/
+    height:100px; /*height of your image*/
+    /*background-image:url('../images/TRABUCO_EN_LINEA_II.png');*/
+    margin:0; /* If you want no margin */
+    padding:0; /*if your want to padding */
+}
 

@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui" >
 
 <h:head>
     <h:outputStylesheet library="css" name="default.css"/>
@@ -17,17 +18,40 @@
 <h:body>
 <h:form>
     <div id="contenedor">
-        <div id="top">
+        <div>
             <ui:insert name="top">
-                <h:commandLink  value="#{myTemplateController.CAT_INICIO}" action="#{myTemplateController.index()}"></h:commandLink> |
-                <h:commandLink  value="#{myTemplateController.CAT_CARDENAS}" action="#{myTemplateController.cardenas()}"></h:commandLink> |
-                <h:commandLink  value="#{myTemplateController.CAT_REGION}" action="#{myTemplateController.news()}"></h:commandLink> |
-                <h:commandLink  value="#{myTemplateController.CAT_NACIONAL}" action="#{myTemplateController.news()}"></h:commandLink> |
-                <h:commandLink  value="#{myTemplateController.CAT_INTERNACIONAL}" action="#{myTemplateController.news()}"></h:commandLink> |
-                <h:commandLink  value="#{myTemplateController.CAT_CULTURA}" action="#{myTemplateController.news()}"></h:commandLink> |
-                <h:commandLink  value="#{myTemplateController.CAT_ROJA}" action="#{myTemplateController.news()}"></h:commandLink> |
-                <h:commandLink  value="#{myTemplateController.CAT_ELECCIONES}" action="#{myTemplateController.news()}"></h:commandLink> |
-                <h:commandLink  value="#{myTemplateController.CAT_CONTACTOS}" action="#{myTemplateController.contactos()}"></h:commandLink>
+                <div class="logo">
+                    <img src="TRABUCO_EN_LINEA_II.png" alt="Trabuco En Línea"/>
+                </div>
+                <p:tabMenu activeIndex="#{param.i}">
+                    <p:menuitem value="#{myTemplateController.CAT_INICIO}" icon="ui-icon-home" action="#{myTemplateController.index()}" ajax="false">
+                        <f:param name="i" value="0" />
+                    </p:menuitem>
+                    <p:menuitem value="#{myTemplateController.CAT_CARDENAS}" icon="ui-icon-star" action="#{myTemplateController.cardenas()}" ajax="false">
+                        <f:param name="i" value="1" />
+                    </p:menuitem>
+                    <p:menuitem value="#{myTemplateController.CAT_REGION}" icon="ui-icon-star" action="#{myTemplateController.news()}" ajax="false">
+                        <f:param name="i" value="2" />
+                    </p:menuitem>
+                    <p:menuitem value="#{myTemplateController.CAT_NACIONAL}" icon="ui-icon-star" action="#{myTemplateController.news()}" ajax="false">
+                        <f:param name="i" value="3" />
+                    </p:menuitem>
+                    <p:menuitem value="#{myTemplateController.CAT_INTERNACIONAL}" icon="ui-icon-star" action="#{myTemplateController.news()}" ajax="false">
+                        <f:param name="i" value="4" />
+                    </p:menuitem>
+                    <p:menuitem value="#{myTemplateController.CAT_CULTURA}" icon="ui-icon-star" action="#{myTemplateController.news()}" ajax="false">
+                        <f:param name="i" value="5" />
+                    </p:menuitem>
+                    <p:menuitem value="#{myTemplateController.CAT_ROJA}" icon="ui-icon-star" action="#{myTemplateController.news()}" ajax="false">
+                        <f:param name="i" value="6" />
+                    </p:menuitem>
+                    <p:menuitem value="#{myTemplateController.CAT_ELECCIONES}" icon="ui-icon-star" action="#{myTemplateController.news()}" ajax="false">
+                        <f:param name="i" value="7" />
+                    </p:menuitem>
+                    <p:menuitem value="#{myTemplateController.CAT_CONTACTOS}" icon="ui-icon-person" action="#{myTemplateController.contactos()}" ajax="false">
+                        <f:param name="i" value="8" />
+                    </p:menuitem>
+                </p:tabMenu>
             </ui:insert>
         </div>
 
