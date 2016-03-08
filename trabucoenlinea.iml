@@ -21,9 +21,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/web/resources" type="java-resource" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.27" level="application_server_libraries" />
     <orderEntry type="library" name="Mojarra-2.2.1" level="project" />
     <orderEntry type="library" name="PrimeFaces-5.2" level="project" />
   </component>
