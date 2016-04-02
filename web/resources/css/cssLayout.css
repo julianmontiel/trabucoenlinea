@@ -73,11 +73,12 @@
     overflow: hidden;
 }
 
-div.logo:before {
-    width:100px; /*width of your image*/
-    height:100px; /*height of your image*/
+.logo{
+    width:280px; /*width of your image*/
+    height:60px; /*height of your image*/
     /*background-image:url('../images/TRABUCO_EN_LINEA_II.png');*/
     margin:0; /* If you want no margin */
     padding:0; /*if your want to padding */
+
 }
 

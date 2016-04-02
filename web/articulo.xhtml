@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<head>
+    <title>${myTemplateController.getTitle()}</title>
+</head>
+<body>
+<ui:composition template="/templates/mytemplate.xhtml">
+    <!--<ui:define name="head"></ui:define>-->
+    <ui:define name="content">
+        <h:form>
+
+            <h:panelGrid columns="2" style="margin-bottom: 10px" cellpadding="5">
+                <p:outputLabel for="titulo" value="Título:"/>
+                <p:inputText id="titulo" />
+
+                <p:outputLabel for="alias" value="Alias:"/>
+                <p:inputText id="alias" />
+
+                <p:outputLabel for="categoria" value="Categoría:"/>
+                <p:selectOneMenu id="categoria" value="#{articuloController.category}" style="width:125px">
+                    <f:selectItem itemLabel="Seleccionar categoría" itemValue="" />
+                    <f:selectItems value="#{articuloController.categories}" />
+                </p:selectOneMenu>
+
+                <p:outputLabel for="estado" value="Estado:"/>
+                <p:selectOneMenu id="estado" value="#{articuloController.estado}" style="width:125px">
+                    <f:selectItem itemLabel="Seleccionar estado" itemValue="" />
+                    <f:selectItems value="#{articuloController.estados}" />
+                </p:selectOneMenu>
+
+                <p:outputLabel for="creado_por" value="Creado por:"/>
+                <p:inputText id="creado_por" />
+
+                <p:outputLabel for="fecha_creacion" value="Fecha de creación:"/>
+                <p:calendar id="fecha_creacion" value="#{articuloController.fecha_creacion}" showOn="button" pattern="dd/MM/yyyy" />
+
+                <p:outputLabel for="inicio_publicacion" value="Inicio de la publicacioón:"/>
+                <p:calendar id="inicio_publicacion" value="#{articuloController.inicio_publicacion}" showOn="button" pattern="dd/MM/yyyy" />
+
+                <p:outputLabel for="finalizacion_publicacion" value="Finalización de la publicación:"/>
+                <p:calendar id="finalizacion_publicacion" value="#{articuloController.fin_publicacion}" showOn="button" pattern="dd/MM/yyyy" />
+
+                <p:outputLabel for="editor" value="Texto del Artículo:"/>
+                <p:editor id="editor" widgetVar="editorWidget" value="#{articuloController.text}" width="600" />
+
+                <h:panelGrid columns="2" style="margin-top: 10px">
+                    <p:commandButton value="Guardar" type="button" icon="ui-icon-disk" />
+
+                    <p:commandButton value="Borrar Campos" type="button"  icon="ui-icon-close" />
+                </h:panelGrid>
+
+
+            </h:panelGrid>
+
+        </h:form>
+    </ui:define>
+</ui:composition>
+</body>
+
+</html>

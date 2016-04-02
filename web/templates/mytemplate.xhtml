@@ -20,9 +20,13 @@
     <div id="contenedor">
         <div>
             <ui:insert name="top">
-                <div class="logo">
-                    <img src="TRABUCO_EN_LINEA_II.png" alt="Trabuco En Línea"/>
-                </div>
+                <p:panelGrid columns="2" styleClass="ui-noborder style">
+                    <h:graphicImage styleClass="logo" url="#{resource['images:TRABUCO_EN_LINEA.png']}" alt="Trabuco En Línea"/>
+                    <h:panelGroup>
+                        <div id="TT_vBTE1kkkE1zczFGUKAzDzDDzj6lULzY2Ld1YkcioKEj5moGI3"><a href="http://www.tutiempo.net">El tiempo por Tutiempo.net</a></div>
+                        <script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_vBTE1kkkE1zczFGUKAzDzDDzj6lULzY2Ld1YkcioKEj5moGI3"></script>
+                    </h:panelGroup>
+                </p:panelGrid>
                 <p:tabMenu activeIndex="#{param.i}">
                     <p:menuitem value="#{myTemplateController.CAT_INICIO}" icon="ui-icon-home" action="#{myTemplateController.index()}" ajax="false">
                         <f:param name="i" value="0" />
@@ -51,12 +55,17 @@
                     <p:menuitem value="#{myTemplateController.CAT_CONTACTOS}" icon="ui-icon-person" action="#{myTemplateController.contactos()}" ajax="false">
                         <f:param name="i" value="8" />
                     </p:menuitem>
+                    <p:menuitem value="#{myTemplateController.CAT_ARTICULO}" icon="ui-icon-person" action="#{myTemplateController.articulo()}" ajax="false">
+                        <f:param name="i" value="9" />
+                    </p:menuitem>
                 </p:tabMenu>
             </ui:insert>
         </div>
 
         <div id="content" class="center_content">
-            <ui:insert name="content">Content</ui:insert>
+            <ui:insert name="content">
+                Content
+            </ui:insert>
         </div>
 
         <div id="bottom">
