@@ -41,7 +41,7 @@
                 <p:outputLabel for="fecha_creacion" value="Fecha de creación:"/>
                 <p:calendar id="fecha_creacion" value="#{articuloController.fecha_creacion}" showOn="button" pattern="dd/MM/yyyy" />
 
-                <p:outputLabel for="inicio_publicacion" value="Inicio de la publicacioón:"/>
+                <p:outputLabel for="inicio_publicacion" value="Inicio de la publicación:"/>
                 <p:calendar id="inicio_publicacion" value="#{articuloController.inicio_publicacion}" showOn="button" pattern="dd/MM/yyyy" />
 
                 <p:outputLabel for="finalizacion_publicacion" value="Finalización de la publicación:"/>
@@ -51,7 +51,7 @@
                 <p:editor id="editor" widgetVar="editorWidget" value="#{articuloController.text}" width="600" />
 
                 <h:panelGrid columns="2" style="margin-top: 10px">
-                    <p:commandButton value="Guardar" type="button" icon="ui-icon-disk" />
+                    <p:commandButton value="Guardar" type="button" icon="ui-icon-disk" action="#{articuloController.enviarArticulo}" />
 
                     <p:commandButton value="Borrar Campos" type="button"  icon="ui-icon-close" />
                 </h:panelGrid>

@@ -69,7 +69,12 @@ public class ArticuloController {
         estados.put("Archivado", "Archivado");
         estados.put("Movido a la Papelera", "Papelera");
 
-
-
     }
+
+    public String enviarArticulo(){
+
+        return "";
+    }
+
+
 }
